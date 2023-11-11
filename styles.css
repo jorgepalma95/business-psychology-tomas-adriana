@@ -6,6 +6,14 @@
     color: black;
 }
 
+@media (max-width: 768px) {
+  .navbar-toggler {
+      position: absolute;
+      right: 50px;
+      z-index: 1000; /* To ensure it's above other content */
+  }
+}
+
 .bg-grey {
     background-color: #e0e0db;
 }
