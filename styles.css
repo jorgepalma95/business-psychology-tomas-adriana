@@ -2,7 +2,12 @@
     --bs-body-font-family: 'Work Sans', sans-serif;
 }
 
- .nav-link, .nav-link:hover {
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+a:hover, .nav-link, .nav-link:hover {
     color: black;
 }
 
@@ -16,6 +21,26 @@
 
 .bg-grey {
     background-color: #e0e0db;
+}
+
+.bg-grey-rounded {
+    background-color: #e0e0db;
+    border-radius: 25px;
+}
+
+.hero-background {
+  background-image: url('/images/bg-top.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  font-weight: 900;
 }
 
 .underline-animation {
@@ -61,4 +86,18 @@
     background-color: #797975;
     color: #FFF;
     cursor: pointer;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.btn-icon:hover, .btn-close-content:hover {
+  color:#797975;
 }
