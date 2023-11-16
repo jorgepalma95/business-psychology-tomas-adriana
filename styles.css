@@ -35,8 +35,7 @@ a:hover, .nav-link, .nav-link:hover {
   background-repeat: no-repeat;
   height: 400px;
   display: flex; 
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .active {
