@@ -92,10 +92,25 @@ a:hover, .nav-link, .nav-link:hover {
   object-fit: cover;
 }
 
+.mandatory {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
 .btn-icon {
   background: none;
   border: none;
   padding: 0;
+}
+
+.btn-main {
+  background-color: #253551;
+  color: white;
+}
+
+.btn-main:hover {
+  background-color: #141d2b;
+  color: white;
 }
 
 .btn-icon:hover, .btn-close-content:hover {
