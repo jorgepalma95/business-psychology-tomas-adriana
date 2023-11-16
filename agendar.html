@@ -45,7 +45,70 @@
                 </div>
                 <div class="col-lg-7">
                     
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgmT40xECGTVpgTS0WwJluSOmjUmuiQAsWzx_VVGzkU2zZtw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <form action="xxxxxx" method="post">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nome <span class="mandatory">(obrigatório)</span></label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="dataNascimento" class="form-label">Data de Nascimento <span class="mandatory">(obrigatório)</span></label>
+                            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail <span class="mandatory">(obrigatório)</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Contacto Telefónico <span class="mandatory">(obrigatório)</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Motivo <span class="mandatory">(obrigatório)</span></label>
+                            <p>Uma breve descrição do motivo da consulta. Se tiver preferencia por algum técnico poderá mencionar aqui:</p>
+                            <textarea class="form-control" id="reason" name="reason" rows="3" required></textarea>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label>Modo da Consulta</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="appointmentMode" id="online" value="online" checked>
+                                <label class="form-check-label" for="online">Online</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="appointmentMode" id="presencial" value="presencial">
+                                <label class="form-check-label" for="presencial">Presencial</label>
+                            </div>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label>Horário Preferencial das Consultas</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="appointmentTime" id="manha" value="manha" checked>
+                                <label class="form-check-label" for="manha">Manhã 8h-12h</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="appointmentTime" id="inicioTarde" value="inicioTarde">
+                                <label class="form-check-label" for="inicioTarde">Início da tarde 13h-16h</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="FimTarde" id="FimTarde" value="FimTarde">
+                                <label class="form-check-label" for="FimTarde">Fim de tarde 17h-21h</label>
+                            </div>
+                        </div>
+                    
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="bolsaSocial" name="bolsaSocial">
+                            <label class="form-check-label" for="bolsaSocial">Bolsa Social</label>
+                            <p class="mandatory">O valor por sessão tem por base uma tabela de valores pré-definidos segundo o escalão do IRS e será posteriormente comunicado ao paciente. As vagas para esta Bolsa Social são mensalmente limitadas. <br>Para o acesso aos valores reduzidos de Bolsa Social é necessário a apresentação da declaração anual de rendimentos do agregado familiar.</p>
+                        </div>
+                    
+                        <button type="submit" class="btn btn-main btn-md rounded-5 px-5 mt-3">Enviar</button>
+                    </form>
+                    
                     
                 </div>
             </div>
