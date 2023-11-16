@@ -103,7 +103,7 @@ a:hover, .nav-link, .nav-link:hover {
   padding: 0;
 }
 
-.btn-main {
+.btn-main, button .btn-main {
   background-color: #253551;
   color: white;
 }
