@@ -164,10 +164,32 @@
 
 <script>
 $(document).ready(function() {
-    $('.collapse').on('shown.bs.collapse', function() {
-        // Change to 'minus' icon when content is opened
-        $(this).parent().find('.btn-icon i').removeClass('bi-plus-circle').addClass('bi-dash-circle');
+    // Function to toggle icons
+    function toggleIcon(element, addIcon, removeIcon) {
+        element.removeClass(removeIcon).addClass(addIcon);
+    }
 
+    // Handle opening of collapse elements
+    $('.btn-icon').click(function() {
+        var currentCollapse = $(this).attr('aria-controls');
+
+        // Close other collapses
+        $('.collapse').each(function() {
+            if ($(this).attr('id') !== currentCollapse && $(this).hasClass('show')) {
+                $(this).collapse('hide');
+                // Adjust the icon of the other collapses
+                var otherIcon = $('a[aria-controls="' + $(this).attr('id') + '"]').find('i');
+                toggleIcon(otherIcon, 'bi-plus-circle', 'bi-dash-circle');
+            }
+        });
+
+        // Toggle icon of the clicked collapse
+        var icon = $(this).find('i');
+        icon.toggleClass('bi-plus-circle bi-dash-circle');
+    });
+
+    // Handle showing of collapse
+    $('.collapse').on('shown.bs.collapse', function() {
         // Scroll to the element
         var elementTop = $(this).offset().top;
         var offset = 0; // Adjust this if you have a fixed header
@@ -175,16 +197,15 @@ $(document).ready(function() {
             top: elementTop - offset,
             behavior: 'smooth'
         });
-    }).on('hidden.bs.collapse', function() {
-        // Change back to 'plus' icon when content is closed
-        $(this).parent().find('.btn-icon i').removeClass('bi-dash-circle').addClass('bi-plus-circle');
     });
 
-    $('.btn-icon').click(function() {
-        var icon = $(this).find('i');
-        icon.toggleClass('bi-plus-circle bi-dash-circle');
+    // Handle hiding of collapse
+    $('.collapse').on('hidden.bs.collapse', function() {
+        var icon = $('a[aria-controls="' + $(this).attr('id') + '"]').find('i');
+        toggleIcon(icon, 'bi-plus-circle', 'bi-dash-circle');
     });
 
+    // Handle the close button inside the collapse content
     $('.btn-close-content').click(function() {
         var targetId = $(this).data('target');
         $(targetId).collapse('hide');
