@@ -117,11 +117,13 @@ a:hover, .nav-link, .nav-link:hover {
 .btn-main-empty:hover {
   background-color: #253551;
   color: white;
+  cursor: pointer;
 }
 
 .btn-main:hover {
   background-color: #141d2b;
   color: white;
+  cursor: pointer;
 }
 
 .btn-icon:hover, .btn-close-content:hover {
