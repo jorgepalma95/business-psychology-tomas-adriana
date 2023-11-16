@@ -101,3 +101,17 @@ a:hover, .nav-link, .nav-link:hover {
 .btn-icon:hover, .btn-close-content:hover {
   color:#797975;
 }
+
+iframe {
+  width: 100%;
+  height: 1760px; /* or you can set a fixed height in pixels if preferred */
+  border: none;
+  overflow: hidden; /* This hides the scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+iframe::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
