@@ -73,7 +73,7 @@
                         </div>
                     
                         <div class="mb-3">
-                            <label>Modo da Consulta</label>
+                            <label for="modoConsulta">Modo da Consulta</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="modoConsulta" id="online" value="online" checked>
                                 <label class="form-check-label" for="online">Online</label>
@@ -83,9 +83,32 @@
                                 <label class="form-check-label" for="presencial">Presencial</label>
                             </div>
                         </div>
+
+                        <div class="mb-3">
+                            <label for="tipo-de-pedido">Pedido de: <span class="mandatory">(obrigatório)</span></label>
+                            <p class="mandatory">Os pedidos de consulta são respondidos por ordem de chegada e encaminhados para o/a profissional mais adequado, tendo em consideração o motivo, zona de residência e área de especialidade. 
+                                Todos os dados fornecidos são confidenciais.
+                                </p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo-de-pedido" id="avaliacao-psicologica-crianca-e-adolescente" value="avaliacao-psicologica-crianca-e-adolescente" checked>
+                                <label class="form-check-label" for="avaliacao-psicologica-crianca-e-adolescente">Avaliação Psicológica da Criança e do Adolescente</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo-de-pedido" id="avaliacao-psicologica-adulto-e-adulto-mais-velho" value="avaliacao-psicologica-adulto-e-adulto-mais-velho">
+                                <label class="form-check-label" for="avaliacao-psicologica-adulto-e-adulto-mais-velho">Avaliação Psicológica do Adulto e do Adulto mais velho</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo-de-pedido" id="consulta-psicologia-crianca-e-adolescente" value="consulta-psicologia-crianca-e-adolescente">
+                                <label class="form-check-label" for="consulta-psicologia-crianca-e-adolescente">Consulta de Psicologia da Criança e do Adolescente</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo-de-pedido" id="consulta-psicologia-adulto-e-adulto-mais-velho" value="consulta-psicologia-adulto-e-adulto-mais-velho">
+                                <label class="form-check-label" for="consulta-psicologia-adulto-e-adulto-mais-velho">Consulta de Psicologia do Adulto e do Adulto mais velho</label>
+                            </div>
+                        </div>
                     
                         <div class="mb-3">
-                            <label>Horário Preferencial das Consultas</label>
+                            <label for="horario">Horário Preferencial das Consultas</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="horario" id="Manha8h-12h" value="Manha8h-12h" checked>
                                 <label class="form-check-label" for="Manha8h-12h">Manhã 8h-12h</label>
@@ -104,6 +127,11 @@
                             <input type="checkbox" class="form-check-input" id="bolsaSocial" name="bolsaSocial">
                             <label class="form-check-label" for="bolsaSocial">Bolsa Social</label>
                             <p class="mandatory">O valor por sessão tem por base uma tabela de valores pré-definidos segundo o escalão do IRS e será posteriormente comunicado ao paciente. As vagas para esta Bolsa Social são mensalmente limitadas. <br>Para o acesso aos valores reduzidos de Bolsa Social é necessário a apresentação da declaração anual de rendimentos do agregado familiar.</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="preferencia" class="form-label">Tem preferência por algum profissional da equipa (mediante disponibilidade de agenda):</label>
+                            <input type="text" class="form-control" id="preferencia" name="preferencia">
                         </div>
                     
                         <button type="submit" class="btn btn-main btn-md rounded-5 px-5 mt-3">Enviar</button>
