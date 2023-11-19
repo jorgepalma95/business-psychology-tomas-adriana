@@ -33,10 +33,12 @@ a:hover, .nav-link, .nav-link:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
   display: flex; 
   flex-direction: column;
+  position: relative;
 }
+
+
 
 .active {
   font-weight: 900;
@@ -48,23 +50,23 @@ a:hover, .nav-link, .nav-link:hover {
     color: #3c3c3c;
   }
   
-  .underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 90%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 5%;
-    background-color: #3c3c3c;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 90%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 5%;
+  background-color: #3c3c3c;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
   
-  .underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
   .cropped-hero {
     width: 90vh; 
@@ -143,5 +145,21 @@ footer {
       flex: 0 0 100%; /* Makes each child take full width */
       display: block; /* Stacks the children */
       margin-bottom: 10px; /* Adds some space between the elements */
+  }
+
+  .hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7); /* White overlay with 50% opacity */
+    z-index: 1;
+  }
+
+  .hero-background > * {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
   }
 }
