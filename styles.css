@@ -163,3 +163,14 @@ footer {
     z-index: 2; /* Ensures content is above the overlay */
   }
 }
+
+@media (max-width: 992px) {
+
+.cropped-hero {
+  width: 90vh; 
+  height: 30vh; 
+  object-fit: cover;
+  object-position: 100%; 
+}
+
+}
