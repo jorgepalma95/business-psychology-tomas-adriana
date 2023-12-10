@@ -68,7 +68,7 @@ a:hover, .nav-link, .nav-link:hover {
   transform-origin: bottom left;
 }
 
-  .cropped-hero {
+.cropped-hero {
     width: 90vh; 
     height: 70vh; 
     object-fit: cover;
@@ -111,8 +111,7 @@ a:hover, .nav-link, .nav-link:hover {
 
 .btn-main-empty {
   border: 2px solid #253551; /* Example border color, you can change it */
-  background-color: transparent;
-  color: #253551;
+  color: #3a3a3a;
 }
 
 .btn-main-empty:hover {
